@@ -1,0 +1,22 @@
+
+  
+  {
+    "manifest_version": 3,
+    "name": "spelling Detector",
+    "version": "1.0",
+    "description": "Detects keystrokes and displays all text inside the extension",
+    "permissions": ["activeTab", "scripting"],
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+      {"resources": ["popup.html"], "matches": ["<all_urls>"]},
+      {"resources": ["popup.js"], "matches": ["<all_urls>"]}
+    ]
+  }
+  
+ 
